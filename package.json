@@ -1,6 +1,6 @@
 {
 	"name": "pretty-bytes-es5",
-	"version": "5.1.0",
+	"version": "5.1.3",
 	"description": "Convert bytes to a human readable string: 1337 → 1.34 kB and works on IE 11 because we use `var` instead of `const` to declare variables 😑",
 	"license": "MIT",
 	"repository": "cdeutsch/pretty-bytes-es5",
@@ -16,7 +16,8 @@
 		"test": "NODE_ICU_DATA=node_modules/full-icu ava"
 	},
 	"files": [
-		"index.js"
+		"index.js",
+		"index.d.ts"
 	],
 	"keywords": [
 		"pretty",
@@ -38,5 +39,5 @@
 		"ava": "*",
 		"full-icu": "^1.2.1"
 	},
-	"typings": "index.d.ts"
+	"types": "./index.d.ts"
 }
