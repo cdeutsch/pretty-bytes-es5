@@ -31,7 +31,7 @@ var toLocaleString = function(number, locale) {
 
 module.exports = function(number, options) {
 	if (!Number.isFinite(number)) {
-		throw new TypeError(`Expected a finite number, got ${typeof number}: ${number}`);
+		throw new TypeError('Expected a finite number, got ' + typeof number + ': ' + number);
 	}
 
 	options = Object.assign({}, options);
