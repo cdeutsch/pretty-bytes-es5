@@ -1,5 +1,3 @@
-# pretty-bytes [![Build Status](https://travis-ci.org/sindresorhus/pretty-bytes.svg?branch=master)](https://travis-ci.org/sindresorhus/pretty-bytes)
-
 > Convert bytes to a human readable string: `1337` → `1.34 kB`
 
 Useful for displaying file sizes for humans.
@@ -11,14 +9,14 @@ Useful for displaying file sizes for humans.
 ## Install
 
 ```
-$ npm install pretty-bytes
+$ npm install pretty-bytes-es5
 ```
 
 
 ## Usage
 
 ```js
-const prettyBytes = require('pretty-bytes');
+const prettyBytes = require('pretty-bytes-es5');
 
 prettyBytes(1337);
 //=> '1.34 kB'
@@ -67,11 +65,6 @@ Default: `false` *(No localization)*
 - If `string`: Expects a [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag) (For example: `en`, `de`, …)
 
 **Note:** Localization should generally work in browsers. Node.js needs to be [built](https://github.com/nodejs/node/wiki/Intl) with `full-icu` or `system-icu`. Alternatively, the [`full-icu`](https://github.com/unicode-org/full-icu-npm) module can be used to provide support at runtime.
-
-
-## Related
-
-- [pretty-bytes-cli](https://github.com/sindresorhus/pretty-bytes-cli) - CLI for this module
 
 
 ## License
