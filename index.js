@@ -18,8 +18,8 @@ Formats the given number using `Number#toLocaleString`.
 - If locale is true, the system default locale is used for translation.
 - If no value for locale is specified, the number is returned unmodified.
 */
-var toLocaleString = (number, locale) => {
-	let result = number;
+var toLocaleString = function(number, locale) {
+	var result = number;
 	if (typeof locale === 'string') {
 		result = number.toLocaleString(locale);
 	} else if (locale === true) {
@@ -29,7 +29,7 @@ var toLocaleString = (number, locale) => {
 	return result;
 };
 
-module.exports = (number, options) => {
+module.exports = function(number, options) {
 	if (!Number.isFinite(number)) {
 		throw new TypeError(`Expected a finite number, got ${typeof number}: ${number}`);
 	}
