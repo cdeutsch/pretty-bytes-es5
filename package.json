@@ -1,6 +1,6 @@
 {
 	"name": "pretty-bytes-es5",
-	"version": "5.1.8",
+	"version": "5.1.9",
 	"description": "Convert bytes to a human readable string: 1337 → 1.34 kB and works on IE 11 because we don't use arrow functions and use `var` instead of `const` to declare variables 😑",
 	"license": "MIT",
 	"repository": "cdeutsch/pretty-bytes-es5",
@@ -14,7 +14,7 @@
 	},
 	"scripts": {
 		"build": "babel ./index.js -d dist",
-		"test": "NODE_ICU_DATA=node_modules/full-icu ava"
+		"test": "npm run build && xo && NODE_ICU_DATA=node_modules/full-icu ava"
 	},
 	"main": "dist/index.js",
 	"files": [
@@ -43,7 +43,8 @@
 		"@babel/core": "^7.2.2",
 		"@babel/preset-env": "^7.2.3",
 		"ava": "*",
-		"full-icu": "^1.2.1"
+		"full-icu": "^1.2.1",
+		"xo": "*"
 	},
 	"types": "./index.d.ts"
 }

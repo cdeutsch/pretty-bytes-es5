@@ -53,7 +53,7 @@ module.exports = (number, options) => {
 	}
 
 	const exponent = Math.min(Math.floor(Math.log10(number) / 3), UNITS.length - 1);
-	number = Number((number / Math.pow(1000, exponent)).toPrecision(3));
+	number = Number((number / (1000 ** exponent)).toPrecision(3));
 	const numberString = toLocaleString(number, options.locale);
 
 	const unit = UNITS[exponent];
